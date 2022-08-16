@@ -5763,7 +5763,7 @@
                                     if (isInlineBase64Image(src) || useCORS) {
                                         img.crossOrigin = 'anonymous';
                                     }
-                                    img.src = src;
+                                    img.src = src + '?v=' + new Date().getTime();
                                     if (img.complete === true) {
                                         // Inline XML images may fail to parse, throwing an Error later on
                                         setTimeout(function () { return resolve(img); }, 500);
